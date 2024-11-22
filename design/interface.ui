@@ -39,7 +39,7 @@
        <number>25</number>
       </property>
       <item>
-       <layout class="QVBoxLayout" name="v1Layout" stretch="0,1,6">
+       <layout class="QVBoxLayout" name="v1Layout" stretch="0,6">
         <property name="spacing">
          <number>10</number>
         </property>
@@ -74,16 +74,13 @@ font-size:14px;
 padding:5px;
 color:#000000;</string>
             </property>
-            <property name="readOnly">
-             <bool>true</bool>
-            </property>
             <property name="plainText">
-             <string>E-&gt;E+T|E-T|T
-T-&gt;T*F|T/F|F
-F-&gt;(E)|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|0|1|2|3|4|5|6|7|8|9</string>
+             <string>E -&gt; E '+' T | E '-' T | T
+T -&gt; T '*' F | T '/' F | F
+F -&gt; '(' E ')' | 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'</string>
             </property>
             <property name="placeholderText">
-             <string>Ingresa una gramática</string>
+             <string notr="true">Ingresa una gramática</string>
             </property>
            </widget>
           </item>
@@ -120,91 +117,8 @@ border-bottom: 2px solid #323232;  </string>
             <property name="lineWrapMode">
              <enum>QPlainTextEdit::NoWrap</enum>
             </property>
-            <property name="plainText">
-             <string>4+(a-b)*x</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="btnsGramaticaLayout">
-          <property name="spacing">
-           <number>10</number>
-          </property>
-          <property name="leftMargin">
-           <number>5</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>5</number>
-          </property>
-          <property name="bottomMargin">
-           <number>5</number>
-          </property>
-          <item>
-           <widget class="QPushButton" name="btnGuardarDerivacion">
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    background-color:#3A3A3A;
-    border-radius:10px;
-    border:2px solid #363636;
-    color:#E6E6E6;
-    font-family:Verdana;
-    font-size:14px;
-    font-weight:bold;
-    padding:7px 12px;
-}
-
-QPushButton:hover {
-    background-color: #444444;
-    border-color: #404040;
-}
-
-QPushButton:pressed {
-    background-color: #3f3f3f;
-    border-color: #3c3c3c;
-    padding-top: 9px;
-    padding-bottom: 5px;
-}
-</string>
-            </property>
-            <property name="text">
-             <string>Guardar Derivación</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="btnCargarDerivacion">
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    background-color:#3A3A3A;
-    border-radius:10px;
-    border:2px solid #363636;
-    color:#E6E6E6;
-    font-family:Verdana;
-    font-size:14px;
-    font-weight:bold;
-    padding:7px 12px;
-}
-
-QPushButton:hover {
-    background-color: #444444;
-    border-color: #404040;
-}
-
-QPushButton:pressed {
-    background-color: #3f3f3f;
-    border-color: #3c3c3c;
-    padding-top: 9px;
-    padding-bottom: 5px;
-}
-</string>
-            </property>
-            <property name="text">
-             <string>Cargar Derivación</string>
+            <property name="placeholderText">
+             <string>Expresión</string>
             </property>
            </widget>
           </item>
@@ -373,7 +287,7 @@ font-weight:bold;</string>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>180</width>
+                  <width>200</width>
                   <height>22</height>
                  </size>
                 </property>
@@ -385,6 +299,9 @@ font-size:15px;</string>
                 <property name="text">
                  <string>Derivación por Izquierda</string>
                 </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
                </widget>
               </item>
              </layout>
@@ -395,7 +312,7 @@ font-size:15px;</string>
                <widget class="QRadioButton" name="radioButtonDerecha">
                 <property name="minimumSize">
                  <size>
-                  <width>180</width>
+                  <width>200</width>
                   <height>22</height>
                  </size>
                 </property>
@@ -539,75 +456,7 @@ QPushButton:pressed {
         <item>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <layout class="QHBoxLayout" name="btnsArbolLayout">
-            <item>
-             <widget class="QPushButton" name="btnPasoAnterior">
-              <property name="styleSheet">
-               <string notr="true">QPushButton {
-    background-color: #464646;
-    border-radius: 10px;
-    border: 2px solid #363636;
-    color: #E6E6E6;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 7px 12px;
-}
-
-QPushButton:hover {
-    background-color: #545454;
-    border-color: #404040;
-}
-
-QPushButton:pressed {
-    background-color: #4c4c4c;
-    border-color: #3c3c3c;
-    padding-top: 9px;
-    padding-bottom: 5px;
-}
-</string>
-              </property>
-              <property name="text">
-               <string>Paso Anterior</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btnPasoSiguiente">
-              <property name="styleSheet">
-               <string notr="true">QPushButton {
-    background-color: #464646;
-    border-radius: 10px;
-    border: 2px solid #363636;
-    color: #E6E6E6;
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 7px 12px;
-}
-
-QPushButton:hover {
-    background-color: #545454;
-    border-color: #404040;
-}
-
-QPushButton:pressed {
-    background-color: #4c4c4c;
-    border-color: #3c3c3c;
-    padding-top: 9px;
-    padding-bottom: 5px;
-}
-</string>
-              </property>
-              <property name="text">
-               <string>Paso Siguiente</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QGraphicsView" name="graphicsView_2">
+           <widget class="QGraphicsView" name="arbolSintactico">
             <property name="styleSheet">
              <string notr="true">background-color:#F0F0F0;
 border-radius: 10px;
